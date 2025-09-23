@@ -80,7 +80,7 @@ export default function Popular() {
                                 <span className='text-[14px] font-normal text-gray-400'>5m</span>
                             </div>
                         </div>
-                        <div onClick={()=> addToCart(item._id , item.images[0] , item.title , size[index] , item.price[size[index]] , 1)} className='cursor-pointer w-10 h-10 rounded-md absolute bottom-0 right-0 flex items-center justify-center bg-secondary'>
+                        <div onClick={()=> addToCart(item._id , item.images[0] , item.title , size[index] , item.price[size[index]] ?? 0 , 1)} className='cursor-pointer w-10 h-10 rounded-md absolute bottom-0 right-0 flex items-center justify-center bg-secondary'>
                             <Image src={cart} alt='icon-cart' width={25} height={25} />
                         </div>
                     </div>

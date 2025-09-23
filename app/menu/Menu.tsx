@@ -44,9 +44,17 @@ export default function Menu() {
     }
 
     if(changeLevel === "low"){
-      data = [...data].sort((a , b)=> Object.values(a.price)[0] - Object.values(b.price)[0])
+      data = [...data].sort((a, b) => {
+        const priceA = (Object.values(a.price)[0] as number | undefined) ?? 0;
+        const priceB = (Object.values(b.price)[0] as number | undefined) ?? 0;
+        return priceA - priceB;
+      });
     }else if(changeLevel === "high"){
-      data = [...data].sort((a , b)=> Object.values(b.price)[0] - Object.values(a.price)[0] )
+      data = [...data].sort((a, b) => {
+        const priceA = (Object.values(a.price)[0] as number | undefined) ?? 0;
+        const priceB = (Object.values(b.price)[0] as number | undefined) ?? 0;
+        return priceB - priceA ;
+      });
     }
 
     if(categories.length > 0){
@@ -203,7 +211,8 @@ export default function Menu() {
                                 </label>
                             })}
                     </div>
-                    <span className='text-xl font-bold text-secondary'>${item.price[size[index]] || item.price[item.sizes[0]]}</span>
+                    <span className='text-xl font-bold text-secondary'>${ item.price[size[index]] ?? item.price[item.sizes[0]] ?? 0 }</span>
+
                   </div>
                   <div className='mt-1'>
                     <div className='flex items-center gap-4'>
@@ -216,7 +225,7 @@ export default function Menu() {
                         <span className='text-[14px] font-normal text-gray-400'>5m</span>
                       </div>
                     </div>
-                    <div onClick={()=> addToCart(item._id , item.images[0] , item.title , size[index] , item.price[size[index]] , 1)} className='cursor-pointer w-10 h-10 rounded-md absolute bottom-0 right-0 flex items-center justify-center bg-secondary'>
+                    <div onClick={()=> addToCart(item._id , item.images[0] , item.title , size[index] , item.price[size[index]] ?? 0  , 1)} className='cursor-pointer w-10 h-10 rounded-md absolute bottom-0 right-0 flex items-center justify-center bg-secondary'>
                         <Image src={cart} alt='icon-cart' width={25} height={25} />
                     </div>
                   </div>
