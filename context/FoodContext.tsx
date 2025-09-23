@@ -33,7 +33,14 @@ export default function FoodContextProvider({children}:{children: ReactNode}) {
     const [food , setFood] = useState<DummyProducts[]>([])
     const [cart , setCart] = useState<CartItem[]>([])
     const [readyCart, setReadyCart] = useState(false)
-    const [token , setToken] = useState<string | null>(localStorage.getItem("token"))
+    const [token , setToken] = useState<string | null>(null)
+
+    useEffect(() => {
+        const savedToken = localStorage.getItem("token");
+        if (savedToken) {
+            setToken(savedToken);
+        }
+    } , []);
 
     console.log(cart)
 
