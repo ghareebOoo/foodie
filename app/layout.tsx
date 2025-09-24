@@ -38,7 +38,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`}
       >
         <FoodContextProvider>
-          {/* <AntiInspect />  */}
+          <AntiInspect /> 
           <Header />
           {children}
           <Footer />
