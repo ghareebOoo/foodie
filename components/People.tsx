@@ -14,9 +14,9 @@ export default function People() {
         <div className='rounded-md bg-[#edbdcd] py-5 shadow-md'>
           <div className='flex items-center gap-4 border-b-[1px] border-b-primary px-5 pb-4'>
             <Image src={userOne} alt='userOne-image' width={50} height={50} className='rounded-full'/>
-            <div className='flex flex-col gap-4'>
-              <h2 className='text-blak text-xl font-medium'>Donald Jackman</h2>
-              <p className='text-base font-normal'>Content Creator</p>
+            <div className='flex flex-col gap-2'>
+              <h2 className='text-blak text-base md:text-xl font-medium'>Donald Jackman</h2>
+              <p className='text-[14px] md:text-base font-normal'>Content Creator</p>
             </div>
           </div>
           <div className='mt-8 px-5 flex flex-col items-start gap-6'>
@@ -35,9 +35,9 @@ export default function People() {
         <div className='rounded-md bg-[#cebfab] py-5 shadow-md'>
           <div className='flex items-center gap-4 border-b-[1px] border-b-primary px-5 pb-4'>
             <Image src={userTwo} alt='userTwo-image' width={50} height={50} className='rounded-full'/>
-            <div className='flex flex-col gap-4'>
-              <h2 className='text-blak text-xl font-medium'>Richard Nelson</h2>
-              <p className='text-base font-normal'>Instagram Influencer</p>
+            <div className='flex flex-col gap-2'>
+              <h2 className='text-blak text-base md:text-xl font-medium'>Richard Nelson</h2>
+              <p className='text-[14px] md:text-base font-normal'>Instagram Influencer</p>
             </div>
           </div>
           <div className='mt-8 px-5 flex flex-col items-start gap-6'>
@@ -56,9 +56,9 @@ export default function People() {
         <div className='rounded-md bg-[#ead6ff] py-5 shadow-md'>
           <div className='flex items-center gap-4 border-b-[1px] border-b-primary px-5 pb-4'>
             <Image src={userThree} alt='userThree-image' width={50} height={50} className='rounded-full'/>
-            <div className='flex flex-col gap-4'>
-              <h2 className='text-blak text-xl font-medium'>James Washington</h2>
-              <p className='text-base font-normal'>Digital Content Creator</p>
+            <div className='flex flex-col gap-2'>
+              <h2 className='text-blak text-base md:text-xl font-medium'>James Washington</h2>
+              <p className='text-[14px] md:text-base font-normal'>Digital Content Creator</p>
             </div>
           </div>
           <div className='mt-8 px-5 flex flex-col items-start gap-6'>
