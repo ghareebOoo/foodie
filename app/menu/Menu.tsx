@@ -205,9 +205,9 @@ export default function Menu() {
                   <div className="mt-3 flex items-center justify-between">
                     <div className='flex items-center gap-2'>
                       {item.sizes.map((si , sizeIndex)=>{
-                                return <label key={sizeIndex} className={`cursor-pointer w-[25px] h-[25px] flex items-center justify-center ${size[index] === si ? "border-[1px] border-secondary bg-white" : "border-[1px] border-gray-100 bg-gray-200"}`}>
+                                return <label key={sizeIndex} className={`cursor-pointer w-[30px] h-[30px] flex items-center justify-center ${size[index] === si ? "border-[1px] border-secondary bg-white" : "border-[1px] border-gray-100 bg-gray-200"}`}>
                                     <input value={si} checked={size[index] === si} type="checkbox" className='appearance-none' onChange={()=> handelSize(index , si)}/>
-                                    {si}
+                                    <span className="text-base">{si}</span>
                                 </label>
                             })}
                     </div>

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import FoodContextProvider from "@/context/FoodContext";
 import Footer from "@/components/Footer";
+import AntiInspect from "@/components/AntiInspect";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`}
       >
         <FoodContextProvider>
+          {/* <AntiInspect />  */}
           <Header />
           {children}
           <Footer />
