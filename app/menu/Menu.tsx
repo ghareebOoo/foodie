@@ -40,7 +40,7 @@ export default function Menu() {
     let data = [...food]
 
     if(search){
-      data = [...data].filter((item)=> item.title.includes(search))
+      data = [...data].filter((item)=> item.title.toLowerCase().includes(search.toLowerCase()))
     }
 
     if(changeLevel === "low"){
