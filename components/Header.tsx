@@ -37,7 +37,7 @@ export default function Header() {
     const pathName = usePathname()
     const [showNav , setShowNav] = useState(false)
 
-    const {cart , token} = useFood()
+    const {cart , token , setToken} = useFood()
   return (
     <div className={`${pathName === "/" ? "h-screen bg-tertiray" : "h-[120px] bg-white"} `}>
         {/* HEADER */}
@@ -69,7 +69,7 @@ export default function Header() {
                     </Link>
                     <span className='absolute -top-8 bg-secondary px-4 py-1 rounded-full'>{cart.reduce((acc , cur)=> acc + cur.quantity  , 0)}</span>
                 </div>
-                {token ? <div className='flex items-center justify-center gap-2 bg-secondary py-3 text-white px-5 rounded-full'>
+                {token ? <div onClick={()=> setToken(null)} className='cursor-pointer flex items-center justify-center gap-2 bg-secondary py-3 text-white px-5 rounded-full'>
                     Logout
                     <Image src={myPhoto} alt='image' width={40} height={40} className='w-[40px] h-[40px] rounded-full' />
                 </div> : <Link href={"/login"} className='flex items-center justify-center gap-2 bg-secondary py-3 text-white px-5 rounded-full'>

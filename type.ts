@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-type Price = Partial<Record<string, number>>;
+type Price = Partial<Record<string , number>>;
 
 export type DummyProducts = {
   _id: string;
